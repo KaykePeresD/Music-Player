@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Music Player</title>
+
+  <link rel="icon" type="image/x-icon" href="./img/song.png">
+
+  <link rel="stylesheet" href="style.css">
+  
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+   <div class="toggleMode">
+    <input type="checkbox" class="checkbox" id="chk">
+
+    <label class="label"
+    for="chk">
+  <i class="fas fa-moon"></i>
+  <i class="fas fa-sun"></i>
+  <div class="ball"></div>
+    </label>
+
+   </div>
+
+   <div class="container">
+  </div>
+
+  <div class="player">
+
+    <div class="logo">
+      <img id="Image" src="./img/ispy.jpg" >
+    </div>
+    
+    <span id="musicName"></span>
+    
+    <audio id="player" src=""></audio>
+    <div class="controls">
+      <div class="volume-control">
+            <input type="range" name="volume" id="vol">
+            <span class="num">50</span>
+        </div>
+      <button onclick="changeImage('./img')" id="prevButton"><i class='bx bx-skip-previous'></i></button>
+      <button  id="playPauseButton"><i class='bx bx-caret-right'></i></button>
+      <button onclick="changeImage('./img')" id="nextButton"><i class='bx bx-skip-next'></i></button>
+    </div>
+    <div class="footer">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+  </div>
+  <script src="songs.js"></script>
+  <script type="module" src="script.js"></script>
+  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>
